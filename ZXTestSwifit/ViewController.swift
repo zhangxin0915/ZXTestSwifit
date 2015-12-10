@@ -16,24 +16,32 @@ class ViewController: UIViewController {
         // let 常量  var 变量  声明
         
         // 常量
-        let a = 3;
-        let tempString: String = "swift";
-        print(a);
-        print(tempString);
-        print(a,tempString);
-        
+        let a = 3
+        let tempString: String = "swift"
+        print(a)
+        print(tempString)
+        print(a,tempString)
         //变量
-        var myname: String;
-        myname = "张三";
-        print(myname);
+        var myname: String
+        myname = "张三"
+        print(myname)
         
         //bool
-        let isSelect = true;
+        let isSelect = true
         if isSelect{
-            print("isSelect == ture");
+            print("isSelect == ture")
         }
+        //swift 类型安全 类型推断 强制转换
+        
+        var a1:Int = 1
+        let value: Double = 3.2
+        //value 没变会有一个temp=3 付给a1
+        a1 = Int(value)
+        print(a1)
+        
         
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
