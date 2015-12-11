@@ -39,6 +39,29 @@ class ViewController: UIViewController {
         a1 = Int(value)
         print(a1)
         
+        /**
+        可变元组和不可变元组
+        用var定义的元组就是可变元组，let定义的就是不可变元组。不管是可变还是不可变元组，元组在创建后就不能对其长度进行增加和删除之类的修改，只有可变元组能在创建之后修改元组中的数据
+        
+        需要注意的是，可变元组虽然可以修改数据，但却不能改变其数据的数据类型：
+        */
+        //元组
+        let student = ("zhangsan",98.5,12)
+        print(student)
+        print(student.0,student.1,student.2)
+        let (name,score,numID) = student
+        print(name,score,numID)
+        
+        //不可变元组
+        let studentInfo = (name:"zhangsan",score:98.5,numID:15)
+        print(studentInfo)
+
+        //可变元组
+        var userInfo = (name:"zhangsan",userID:1,age:25)
+        userInfo.name  = "newname"
+        print(userInfo)
+        
+       
         
     }
     
